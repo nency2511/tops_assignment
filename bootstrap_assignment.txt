@@ -1,0 +1,90 @@
+1> What are the default Bootstrap text settings?
+
+Ans: Font family: The default font family in Bootstrap is “Helvetica Neue”, Helvetica, Arial, sans-	serif.
+    
+    Font size: The default font size for the body element in Bootstrap is 16px.
+    
+    Font weight: The default font weight for headings in Bootstrap is bold.
+    
+    Line-height: The global line-height in Bootstrap is 1.5.
+
+
+
+2> What do you know about the Bootstrap Grid System?
+
+Ans: Bootstrap Grid System:
+
+	Bootstrap's grid system allows up to 12 columns across the page.
+
+	Basic Structure of a Bootstrap Grid
+
+	The following is a basic structure of a Bootstrap grid:
+
+	<div class="container">
+	<div class="row">
+	<div class="col-*-*"></div>
+	<div class="col-*-*"></div>
+	</div>
+	<div class="row">
+	<div class="col-*-*"></div>
+	<div class="col-*-*"></div>
+	<div class="col-*-*"></div>
+	</div>
+	<div class="row">
+	...
+	</div>
+	</div> 
+
+
+
+3> What is the difference between Bootstrap 4 and Bootstrap 5?
+
+Ans:    Grid System. It has 5 tier (xs, sm, md, lg, xl). It has 6 tier (xs, sm, md, lg, xl, xxl).
+	Color. It has limited colors. Extra colors added with the looks, A card improved …
+
+
+
+4> What is a Button Group, and what is the class for a basic Button Group?
+
+Ans:    Bootstrap allows you to group a series of buttons together (on a single line) in a button 	group:
+
+	Use a <div> element with class .btn-group to create a button group:
+
+	<div class="btn-group">
+	<button type="button" class="btn btn-primary">Apple</button>
+	<button type="button" class="btn btn-primary">Samsung</button>
+	<button type="button" class="btn btn-primary">Sony</button>
+	</div>
+
+
+5>  How can you use Bootstrap to make thumbnails? 
+
+Ans:    Bootstrap helps web developers to create thumbnails that are used to show linked images in 	grids with the pre-defined classes which help to reduce codes length. Thumbnails are 	created to provide a quick preview of images with small images.
+
+ 	Thumbnail...
+
+	<!DOCTYPE html>
+	<html lang="en">
+	<head>
+	<title>Thumbnail images</title>
+	<link
+	rel="stylesheet"
+	href=
+	"http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/>
+	<script src=
+	"https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js">
+	</script>
+
+
+6>  In Bootstrap 4, what is flexbox?
+
+Ans:	 Use flex classes to control the layout of Bootstrap 4 components.
+
+	Flexbox
+
+	To create a flexbox container and to transform direct children into flex items, use the d-	flex class
+
+
+7> How can one create an alert in Bootstrap? 
+
+Ans:    Alerts are created with the .alert class, followed by one of thefour contextual 	classes .alert-success, .alert-info, .alert-warning or.alert-danger:
