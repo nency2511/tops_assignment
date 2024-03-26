@@ -87,4 +87,350 @@ Ans:	 Use flex classes to control the layout of Bootstrap 4 components.
 
 7> How can one create an alert in Bootstrap? 
 
-Ans:    Alerts are created with the .alert class, followed by one of thefour contextual 	classes .alert-success, .alert-info, .alert-warning or.alert-danger:
+Ans:    Alerts are created with the .alert class, followed by one of thefour contextual 	classes .alert-success, .alert-info, .alert-warning or.alert-danger.
+
+
+
+
+8> plaindrom cheacker:
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Palindrome Checker</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1 class="mt-5 mb-4">Palindrome Checker</h1>
+    <div class="form-group">
+      <input type="text" class="form-control" id="inputString" placeholder="Enter a string">
+    </div>
+    <button class="btn btn-primary mb-3" onclick="checkPalindrome()">Check Palindrome</button>
+    <div id="result" class="mb-3"></div>
+  </div>
+
+
+9> responsive navbar:
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Navbar</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">Your Logo</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">About</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Services</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Contact</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<!-- Bootstrap JS and jQuery (required for Bootstrap) -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>
+
+10> simple calculator:
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple Calculator</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Custom CSS -->
+  <style>
+    .calculator {
+      max-width: 400px;
+      margin: 0 auto;
+    }
+    .btn {
+      width: 25%;
+      height: 60px;
+      font-size: 24px;
+    }
+    .display {
+      height: 80px;
+      font-size: 36px;
+      text-align: right;
+      padding: 10px;
+      margin-bottom: 10px;
+      background-color: #f0f0f0;
+      border: 1px solid #ccc;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container calculator">
+  <div class="row">
+    <div class="col-12">
+      <div class="display" id="display">0</div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-3"><button class="btn btn-secondary" onclick="appendToDisplay('7')">7</button></div>
+    <div class="col-3"><button class="btn btn-secondary" onclick="appendToDisplay('8')">8</button></div>
+    <div class="col-3"><button class="btn btn-secondary" onclick="appendToDisplay('9')">9</button></div>
+    <div class="col-3"><button class="btn btn-info" onclick="appendToDisplay('/')">/</button></div>
+  </div>
+  <div class="row">
+    <div class="col-3"><button class="btn btn-secondary" onclick="appendToDisplay('4')">4</button></div>
+    <div class="col-3"><button class="btn btn-secondary" onclick="appendToDisplay('5')">5</button></div>
+    <div class="col-3"><button class="btn btn-secondary" onclick="appendToDisplay('6')">6</button></div>
+    <div class="col-3"><button class="btn btn-info" onclick="appendToDisplay('*')">*</button></div>
+  </div>
+  <div class="row">
+    <div class="col-3"><button class="btn btn-secondary" onclick="appendToDisplay('1')">1</button></div>
+    <div class="col-3"><button class="btn btn-secondary" onclick="appendToDisplay('2')">2</button></div>
+    <div class="col-3"><button class="btn btn-secondary" onclick="appendToDisplay('3')">3</button></div>
+    <div class="col-3"><button class="btn btn-info" onclick="appendToDisplay('-')">-</button></div>
+  </div>
+  <div class="row">
+    <div class="col-3"><button class="btn btn-secondary" onclick="appendToDisplay('0')">0</button></div>
+    <div class="col-3"><button class="btn btn-secondary" onclick="appendToDisplay('.')">.</button></div>
+    <div class="col-3"><button class="btn btn-success" onclick="calculate()">=</button></div>
+    <div class="col-3"><button class="btn btn-info" onclick="appendToDisplay('+')">+</button></div>
+  </div>
+  <div class="row">
+    <div class="col-6"><button class="btn btn-warning" onclick="clearDisplay()">AC</button></div>
+    <div class="col-6"><button class="btn btn-danger" onclick="deleteLastCharacter()">DEL</button></div>
+  </div>
+</div>
+
+<!-- Custom JavaScript -->
+<script>
+  function appendToDisplay(value) {
+    document.getElementById('display').innerHTML += value;
+  }
+
+  function calculate() {
+    var displayValue = document.getElementById('display').innerHTML;
+    var result = eval(displayValue);
+    document.getElementById('display').innerHTML = result;
+  }
+
+  function clearDisplay() {
+    document.getElementById('display').innerHTML = '0';
+  }
+
+  function deleteLastCharacter() {
+    var displayValue = document.getElementById('display').innerHTML;
+    document.getElementById('display').innerHTML = displayValue.slice(0, -1);
+  }
+</script>
+
+</body>
+</html>
+
+
+11> currancy converter:
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Currency Converter</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Custom CSS -->
+  <style>
+    .converter {
+      max-width: 400px;
+      margin: 0 auto;
+    }
+    .form-group {
+      margin-bottom: 20px;
+    }
+    .result {
+      font-size: 20px;
+      font-weight: bold;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container converter">
+  <h2 class="text-center mt-4 mb-4">Currency Converter</h2>
+  <div class="form-group">
+    <label for="fromCurrency">From:</label>
+    <select class="form-control" id="fromCurrency">
+      <option value="USD">USD</option>
+      <option value="EUR">EUR</option>
+      <option value="GBP">GBP</option>
+      <option value="JPY">JPY</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="toCurrency">To:</label>
+    <select class="form-control" id="toCurrency">
+      <option value="USD">USD</option>
+      <option value="EUR">EUR</option>
+      <option value="GBP">GBP</option>
+      <option value="JPY">JPY</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="amount">Amount:</label>
+    <input type="number" class="form-control" id="amount">
+  </div>
+  <button class="btn btn-primary btn-block" onclick="convertCurrency()">Convert</button>
+  <div class="result text-center" id="result"></div>
+</div>
+
+<!-- Custom JavaScript -->
+<script>
+  function convertCurrency() {
+    var fromCurrency = document.getElementById('fromCurrency').value;
+    var toCurrency = document.getElementById('toCurrency').value;
+    var amount = parseFloat(document.getElementById('amount').value);
+    var resultElement = document.getElementById('result');
+    
+    // API call for currency conversion (you need to replace it with an actual API call)
+    // For example, you can use free.currencyconverterapi.com or any other currency conversion API
+    // This is just a placeholder
+    var conversionRate = getConversionRate(fromCurrency, toCurrency);
+    
+    var result = amount * conversionRate;
+    resultElement.innerHTML = amount + ' ' + fromCurrency + ' = ' + result.toFixed(2) + ' ' + toCurrency;
+  }
+
+  // This is just a placeholder function for demonstration purposes
+  // You need to replace this with an actual API call to get conversion rate
+  function getConversionRate(fromCurrency, toCurrency) {
+    // Placeholder conversion rates for demonstration
+    var conversionRates = {
+      'USD': {
+        'EUR': 0.85,
+        'GBP': 0.72,
+        'JPY': 113.85
+      },
+      'EUR': {
+        'USD': 1.18,
+        'GBP': 0.85,
+        'JPY': 128.12
+      },
+      'GBP': {
+        'USD': 1.38,
+        'EUR': 1.17,
+        'JPY': 151.57
+      },
+      'JPY': {
+        'USD': 0.0088,
+        'EUR': 0.0078,
+        'GBP': 0.0066
+      }
+    };
+
+    return conversionRates[fromCurrency][toCurrency];
+  }
+</script>
+
+</body>
+</html>
+
+
+12> simple music player:
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple Music Player</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Custom CSS -->
+  <style>
+    .player {
+      max-width: 400px;
+      margin: 0 auto;
+    }
+    .album-art {
+      width: 100%;
+      max-height: 300px;
+      object-fit: cover;
+    }
+    .controls {
+      margin-top: 20px;
+      display: flex;
+      justify-content: center;
+    }
+    .btn {
+      margin: 0 10px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container player">
+  <h2 class="text-center mt-4 mb-4">Music Player</h2>
+  <img src="album-cover.jpg" alt="Album Cover" class="album-art mb-3">
+  <audio id="audioPlayer" controls>
+    <source src="song.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+  <div class="controls">
+    <button class="btn btn-primary" onclick="playAudio()">Play</button>
+    <button class="btn btn-primary" onclick="pauseAudio()">Pause</button>
+    <button class="btn btn-primary" onclick="stopAudio()">Stop</button>
+  </div>
+</div>
+
+<!-- Custom JavaScript -->
+<script>
+  var audioPlayer = document.getElementById('audioPlayer');
+
+  function playAudio() {
+    audioPlayer.play();
+  }
+
+  function pauseAudio() {
+    audioPlayer.pause();
+  }
+
+  function stopAudio() {
+    audioPlayer.pause();
+    audioPlayer.currentTime = 0;
+  }
+</script>
+
+</body>
+</html>
+
+
