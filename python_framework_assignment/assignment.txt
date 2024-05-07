@@ -1,0 +1,65 @@
+1> Why Django should be used for web-development? Explain how you
+can create a project in Django?
+
+=> Django is ideal for web development because it's feature-rich, scalable, secure, backed by a strong community, and
+has
+extensive documentation. To create a project in Django, you install Django using pip, then use the django-admin
+startproject command followed by the project name. Finally, navigate to the project directory and run python manage.py
+runserver to start the development server.
+
+
+2> How to check installed version of django?
+
+=> python -m django --version
+
+
+3> Explain what does django-admin.py make messages command is used
+for?
+
+=> localization (l10n) purposes. When building a web application that needs to support multiple languages, this command
+helps developers extract translatable strings from their Python code and templates into language-specific message files.
+
+
+4> What is Django URLs?make program to create django urls?
+
+=> Django URLs define the mapping between URL patterns and view functions or class-based views in a Django project. They
+serve as entry points for accessing different parts of the web application.
+
+Here's a short example of how to create Django URLs:
+
+Define URL patterns: In your app's urls.py, use the path() function to define URL patterns and associate them with view
+functions or class-based views.
+Map URLs to views: Each URL pattern is mapped to a specific view function or class-based view.
+
+
+5> What is a QuerySet?Write program to create a new Post object in
+database:
+
+=> In Django, a QuerySet is a collection of database query results. It represents a set of objects that meet certain
+criteria specified by a query. QuerySets allow you to retrieve, filter, and manipulate data from the database using
+Django's ORM (Object-Relational Mapping) system.
+
+
+6> Mention what command line can be used to load data into Django?
+
+=>
+To load data into Django, you can use the loaddata command-line utility provided by Django's management tool, manage.py.
+This command is used to load serialized data from fixture files into the database.
+
+The command syntax is:
+
+python manage.py loaddata <fixture_name>
+    Here, <fixture_name> refers to the name of the fixture file containing the data you want to load into the database.
+        Typically, fixture files are in formats like JSON, XML, or YAML and contain serialized data for Django model
+        instances.
+
+        For example, to load data from a fixture file named data.json, you would use:
+
+        python manage.py loaddata data.json
+        This command will deserialize the data from data.json and insert it into the database.
+
+     
+7> Explain what does django-admin.py make messages command is used
+for?
+
+=> The django-admin.py make messages command is used for internationalization (i18n) and localization (l10n) in Django projects.
