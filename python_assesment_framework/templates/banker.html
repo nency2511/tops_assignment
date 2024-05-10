@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body align="center">
+    <!-- {%csrf_token%} -->
+    <form action="" method="post">
+    <h1>banker Dahsboard</h1>
+    <h2>Welcome </h2>
+    <h3>click below to get info of customer</h3>
+
+
+    <a href="info{{std.student_id}}">{{name}}</a>
+
+    <br><br>
+
+    <!-- <table   border="2" align="center">
+        <tr>
+            <th>ID</th>
+            <th>Usename</th>
+            <th>Balance</th>
+            <th>Address</th>
+        </tr>
+
+        {% for i in name %}
+        <tr>
+           
+            <td>{{i.id}}</td>
+            <td>{{i.userame}}</td>
+            <td>{{i.balance}}</td>
+            <td>{{i.address}}</td>
+            <td ><a href="delete/{{i.id}}" style="color: red;">Delete</a></td>
+            <td><a href="update/{{i.id}}" style="color: yellow;">Update</a></td>
+          
+            <br>
+        </tr>
+        {% endfor %}
+    </table> -->
+</form>
+</body>
+
+</html>

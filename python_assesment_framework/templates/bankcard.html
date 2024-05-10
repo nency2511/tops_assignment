@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body align="center">
+ 
+
+    <h1>banker Dahsboard</h1>
+    
+    <form action="" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+
+    <table   border="2" align="center">
+        <tr>
+            <th>ID</th>
+            <th>Usename</th>
+            <th>Balance</th>
+            <th>Address</th>
+        </tr>
+
+  
+        <tr>
+           
+            <td>{{i.id}}</td>
+            <td>{{i.username}}</td>
+            <td>{{i.balance}}</td>
+            <td>{{i.address}}</td>
+            <td ><a href="delete/{{i.id}}" style="color: red;">Delete</a></td>
+            <td><a href="update/{{i.id}}" style="color: yellow;">Update</a></td>
+          
+            <br>
+        </tr>
+      
+    </table>
+</form>
+</form>
+</body>
+
+</html>

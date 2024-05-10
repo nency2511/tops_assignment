@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="static/style.css">
+</head>
+
+<style>
+    body{
+        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        color: green;
+    }
+    input{
+        color: green;
+    }
+
+    span{
+        font-size: 20px;
+        color: red;
+    }
+</style>
+
+<body align = "center"> 
+    
+    <h1>User Login</h1>
+    <span>{{msg}}</span><br> <br>
+    <form action="" method="post">
+        {%csrf_token%}
+        <input type="text" name="username" placeholder="Enter username" name="username"><br><br>
+        <input type="text" name="password" placeholder="Enter password" name="password"><br><br>
+        <input type="submit" style="padding: 0.5% 2%; background-color: green; color: white;"><br><br>
+
+    </form>
+    <a href="reg">New user? register here</a>
+</body>
+
+</html>
