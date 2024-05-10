@@ -1,0 +1,17 @@
+Explain Life cycle in Class Component and functional component with Hooks....
+
+Class Components:
+Class components have several lifecycle methods that allow you to perform actions at different stages of the component's life. These methods include:
+
+Mounting: These methods are called when an instance of a component is being created and inserted into the DOM.
+constructor(): This is called before anything else, when the component is initialized. It's where you should set up your initial state.
+componentDidMount(): This is called after the component is rendered for the first time. It's often used for actions like fetching data from an API.
+Updating: These methods are called when a component is being re-rendered due to changes in props or state.
+componentDidUpdate(prevProps, prevState): This is called after the component's updates are flushed to the DOM. It's used to perform actions when the component re-renders, like updating the DOM in response to prop or state changes.
+Unmounting: This method is called when a component is being removed from the DOM.
+componentWillUnmount(): This is called just before the component is unmounted and destroyed. It's used for cleanup tasks like removing event listeners or cancelling network requests.
+Functional Components with Hooks:
+Functional components with Hooks provide a more concise and readable way to manage state and lifecycle in React. The most commonly used hooks for lifecycle management are:
+
+useState: This hook allows functional components to manage state.
+useEffect: This hook is used to perform side effects in functional components. It combines the functionality of componentDidMount, componentDidUpdate, and componentWillUnmount in class components.
