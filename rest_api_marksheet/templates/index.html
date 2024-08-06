@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      th{
+        color: red;
+      }
+      body{
+        font-family: cursive;
+      }
+      #t1{
+        color: black;
+      }
+
+      #t2{
+        color: green;
+      }
+
+      #t3{
+        color: blue;
+      }
+
+      #t4{
+        color: darkmagenta;
+      }
+
+      #t5{
+        color: darkslategrey;
+      }
+    </style>
+</head>
+<body>
+  <form>
+    <input type="text" name="search" />
+    <input type="submit" />
+  </form>
+
+    <h1 align="center">Srudent Information Page</h1>
+    <div class="col-md-4 m-auto">
+             
+    
+  
+   </div>
+    
+    <table border="2" align="center">
+        <tr>
+            <th>Id</th>
+            <th>Number</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Department</th>
+        </tr>
+
+        {%for std in qryset%}
+        <tr>
+            <td id="t1">{{std.id}}</td>
+            <td id="t2"><a href="marks/{{std.student_id}}">{{std.student_id}}</a></td>
+            <td id="t3">{{std.name}}</td>
+            <td id="t4">{{std.email}}</td>
+            <td id="t5">{{std.department}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+
+
+    <div class="pagination" align="center">
+        <span class="step-links">
+            {% if qryset.has_previous %}
+                <a href="?page=1">&laquo; first</a>
+                <a href="?page={{ qryset.previous_page_number }}">previous</a>
+            {% endif %}
+    
+            <span class="current">
+                Page {{ qryset.number }} of {{ qryset.paginator.num_pages }}.
+            </span>
+    
+            {% if qryset.has_next %}
+                <a href="?page={{ qryset.next_page_number }}">next</a>
+                <a href="?page={{ qryset.paginator.num_pages }}">last &raquo;</a>
+            {% endif %}
+        </span>
+    </div>
+  </form>
+</body>
+</html>

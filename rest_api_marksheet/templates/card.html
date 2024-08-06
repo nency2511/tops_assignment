@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        th,span{
+          color: red;
+        }
+        body{
+          font-family: cursive;
+        }
+        #t1{
+          color: black;
+        }
+  
+        #t2{
+          color: green;
+        }
+  
+        #t3{
+          color: blue;
+        }
+  
+      
+      </style>
+</head>
+<body>
+    <table border="2" align="center">
+        <tr>
+            <th>Id</th>
+            <th>Subject</th>
+            <th>Marks</th>
+          
+        </tr>
+
+        {%for marks in qryset%}
+        <tr>
+            <td id="t1">{{forloop.counter}}</td>
+            <td id="t2">{{marks.subject}}</td>
+            <td id="t3">{{marks.marks}}</td>
+           
+        </tr>
+        {% endfor %}
+    </table>
+
+    <div align="center">
+        Total : <span>{{total.total}}</span>/600
+       <div> PR : {{avg.avg}}</div>
+       <div> Rank : {{rank}}</div>
+
+
+        
+    </div>
+</body>
+</html>
