@@ -1,0 +1,43 @@
+1] what is redux?
+
+Redux is a state management library for JavaScript applications, often used with React. It centralizes the application's state in a single store, making it easier to manage and predict state changes in complex applications. Redux follows three core principles:
+
+Single source of truth: The state of your application is stored in a single object.
+State is read-only: The only way to change the state is by dispatching actions.
+Changes are made with pure functions: Reducers are pure functions that take the current state and an action, and return a new state.
+This structure makes state management more predictable and easier to debug.
+
+
+2] What is Redux Thunk used for?
+
+
+Redux Thunk is a middleware for Redux that allows you to write action creators that return a function instead of an action. 
+This is useful for handling asynchronous operations (like API calls) within your Redux actions. With Thunk, you can delay the 
+dispatch of an action or dispatch multiple actions based on the outcome of an asynchronous task, making it easier to manage complex 
+side effects in your application.
+
+
+3] What is Pure Component? When to use Pure Component over Component?
+
+A Pure Component in React is a type of component that performs a shallow comparison of props and state in its shouldComponentUpdate method to determine if it needs to re-render. If the props and state haven't changed, it prevents unnecessary re-renders, improving performance.
+
+When to use Pure Component over Component:
+Use Pure Component when the component's output only depends on its props and state, and these are simple or shallowly comparable (like numbers, strings, or references).
+Avoid it if your component relies on complex or deeply nested objects and arrays, as shallow comparison might not detect changes in such cases.
+This helps in optimizing performance by avoiding redundant renders.
+
+
+4] What is the second argument that can optionally be passed tosetState and what isits purpose?
+
+The second argument that can optionally be passed to setState in React is a callback function. This function is executed once the setState operation has completed and the component has re-rendered with the updated state.
+
+Purpose:
+Since setState is asynchronous, the callback ensures that any code that relies on the updated state is executed after the state change is applied.
+Example:
+this.setState({ count: this.state.count + 1 }, () => {
+  console.log('State updated:', this.state.count);
+});
+In this example, the callback ensures that the log statement runs after count has been updated.
+
+
+5] 
